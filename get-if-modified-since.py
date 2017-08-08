@@ -19,9 +19,10 @@ def print_header(headers, h):
     
 def url_change():
     url = 'https://www.eff.org/pages/legal-assistance'
-    last_date = 'Sat, 29 Oct 1994 19:43:31 GMT'       # Content weil zu alt
-    last_date = 'Tue, 08 Aug 2017 19:38:12 GMT'       # Content weil 1 Sek zu alt
-    last_date = 'Tue, 08 Aug 2017 19:38:13 GMT'       # Kein Content weil das ist das Alter
+    # Modify the dates and run again
+    last_date = 'Sat, 29 Oct 1994 19:43:31 GMT'       # too old, you will get the content
+    last_date = 'Tue, 08 Aug 2017 19:38:12 GMT'       # 1 sec too old, you will get the content
+    last_date = 'Tue, 08 Aug 2017 19:38:13 GMT'       # not too old, you wont get the content
 
     request = urllib2.Request(url)
     request.add_header("If-Modified-Since", last_date)
