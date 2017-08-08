@@ -1,9 +1,9 @@
 '''
 PURPOSE
 I want to
- - verify that I have the most recent file from a remote site.
+ - Verify that I have the most recent file from a remote site
  - Download the file only if necessary
- - Use as little network traffic as possible.
+ - Use as little network traffic as possible
 
 SOLUTION REQUIRES 
 Webserver that is configured to honour the http header If-Modified-Since
